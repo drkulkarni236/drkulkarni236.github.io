@@ -26,7 +26,7 @@
 						<nav class="links">
 							<ul>
 								<li><a href="projects.html">Projects</a></li>
-								<li><a href="https://drkulkarni236.github.io/Resume/Deva_Kulkarni.pdf" download="Deva_Kulkarni.pdf">Resume</a></li>
+								<li><a href="https://drkulkarni236.github.io/Resume/Deva_Kulkarni.pdf" target="_blank">Resume</a></li>
 								<li><a href="contact.html">Contact</a></li>
 							</ul>
 						</nav>
@@ -111,9 +111,14 @@
 						<section id="intro">
 							<a href="#"><img src="images/Deva.png" alt="" style="width:100%;max-width:400px"/></a>		
 							<ul class="icons" style="display: flex; justify-content: center;">
-								<li><a href="https://github.com/drkulkarni236" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								<li><a href="https://www.linkedin.com/in/deva-kulkarni/" class="icon brands fa-linkedin"><span class="label">RSS</span></a></li>
-								<li><a href="mailto:drkulkarni236@berkeley.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+								<li><a href="https://github.com/drkulkarni236" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								<li><a href="https://www.linkedin.com/in/deva-kulkarni/" target="_blank" class="icon brands fa-linkedin"><span class="label">RSS</span></a></li>
+								<li>
+									<a href="#" class="icon solid fa-envelope" id="email-icon" data-email="drkulkarni236@berkeley.edu">
+									  <span class="label">Email</span>
+									  <span class="tooltip">Click to copy email ID:<br>drkulkarni236@berkeley.edu</span>
+									</a>
+								  </li>
 							</ul>
 														 
 						</section>
@@ -213,11 +218,60 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+			$(document).ready(function() {
+			  $(".icon.fa-envelope").hover(
+				function() {
+				  // Show the tooltip with a delay of 500 milliseconds (adjust as needed)
+				  $(this).find(".tooltip").delay(100).fadeIn(100);
+				},
+				function() {
+				  // Hide the tooltip when the mouse leaves the icon
+				  $(this).find(".tooltip").fadeOut(200);
+				}
+			  );
+			});
+		</script>
+			
+			<script>
+				document.addEventListener("DOMContentLoaded", function() {
+				  const emailIcon = document.getElementById("email-icon");
+				  const emailTooltip = emailIcon.querySelector(".tooltip");
+				
+				  emailIcon.addEventListener("click", function() {
+					// Get the email address from the data attribute
+					const emailAddress = emailIcon.getAttribute("data-email");
+				
+					// Create a temporary textarea element to copy the text
+					const textarea = document.createElement("textarea");
+					textarea.value = emailAddress;
+					document.body.appendChild(textarea);
+				
+					// Select the text in the textarea
+					textarea.select();
+					textarea.setSelectionRange(0, 99999); // For mobile devices
+				
+					// Copy the text to the clipboard
+					document.execCommand("copy");
+				
+					// Remove the temporary textarea
+					document.body.removeChild(textarea);
+				
+					// Show a tooltip to indicate the email has been copied
+					emailTooltip.textContent = "Email Copied!";
+					setTimeout(function() {
+					  emailTooltip.textContent = "Click to copy email ID";
+					}, 3000); // Reset tooltip text after 1 second
+				  });
+				});
+			</script>
+
 
 	</body>
 </html>

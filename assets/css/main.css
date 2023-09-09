@@ -3627,39 +3627,49 @@ input, select, textarea {
 
 /* Define styles for individual project entries */
 .project {
-	display: flex;
-	margin-bottom: 25px;
-	position: relative;
-	border-bottom: 1px solid #ccc;
-	padding-bottom: 25px;
-  }
-  
-  .project img {
-	width: 200px; /* Adjust the image width as needed */
-	height: auto;
-	margin-right: 20px;
-  }
-  
-  .project-details {
-	flex-grow: 1;
-  }
-  
-  /* Style project title */
-  .project-details h3 {
-	font-size: 20px;
-	margin: 0;
-  }
-  
-  /* Style project summary */
-  .project-details p {
-	margin: 10px 0;
-  }
-  
+    display: flex;
+    margin-bottom: 25px;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 25px;
+}
+
+.project-img {
+    width: 150px;
+    height: 150px; /* Set a fixed 150x150px area for the image box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.project img {
+    width: 150px; /* Ensure the image doesn't exceed the box width */
+    max-height: 100%; /* Ensure the image doesn't exceed the box height */
+}
+
+.project-details {
+    flex-grow: 1;
+}
+
+/* Style project title */
+.project-details h3 {
+    font-size: 20px;
+    margin: 0;
+}
+
+/* Style project summary */
+.project-details p {
+    margin: 0px 0;
+}
+
+
  /* Style for the insight icon */
 .insight-icon {
 	position: absolute;
 	bottom: 15px;
-	left: 220px;
+	left: 160px;
 	font-size: 24px;
 	cursor: pointer;
 	color: #007bff ; /* Customize the icon color */
@@ -3722,3 +3732,16 @@ input, select, textarea {
 }
 
 
+.tooltip {
+	display: none;
+	position: absolute;
+	background-color: #333;
+	color: #fff;
+	font-size: 14px; /* Adjust the font size as needed */
+	padding: 5px 10px;
+	border-radius: 5px;
+	white-space: nowrap;
+	transform: translate(-0%, 20px); /* Adjust the Y-offset (10px) as needed */
+  }
+  
+  
