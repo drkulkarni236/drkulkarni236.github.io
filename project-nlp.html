@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Deva Kulkarni</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png">
+
+		
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Deva Kulkarni</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="projects.html">Projects</a></li>
+								<li><a href="https://drkulkarni236.github.io/Resume/Deva_Kulkarni.pdf" target="_blank">Resume</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</nav>
+						<!-- <nav class="main">
+							<ul>
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav> -->
+				</header>
+
+				
+				<!-- Main -->
+					<div id="main">
+
+						
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2>Hate Speech Detection in Hinglish and korean</h2>										
+									</div>									
+								</header>										
+								
+								<p>This is a group project I worked on for the Master of Information and Data Science (MIDS) - <a href='https://www.ischool.berkeley.edu/courses/datasci/266' target="_blank"> Natural Language processing with deep learning</a> course at UC Berkeley. <br>
+									
+								Teammates: <a href='https://www.linkedin.com/in/rebecca-hile-72164254/' target="_blank"> Jared Dec</a>, <a href='https://www.ischool.berkeley.edu/people/mili-gera' target="_blank"> Mili Gera</a>. <br> 
+								
+								Links: <a href="https://docs.google.com/presentation/d/1CtaT2JOLWK6O2f8EYzuSjFYfZNZ3M3eD2B1_eXcejLQ/edit#slide=id.g121b855d9ff_5_323" target="_blank">[Slide Deck]</a>, <a href="https://drkulkarni236.github.io/Folder/Hate Speech Detection in Hinglish and Korean Media.pdf" target="_blank">[Paper]</a> </p>
+								
+
+								
+								<h2>Overwiew</h2>
+
+								<p>In this project, my team and I built an end-to-end failure prediction system for offshore wind turbines. This included  a comprehensive market analysis to identify opportunities and assess potential impact. To ensure the product's relevance and effectiveness, we engaged with subject matter experts who provided invaluable insights into the requisite features. The data was gathered from operational wind turbines at <a href="https://www.edp.com/en" target="_blank">Energias de Portugal</a>, a Portuguese electric utilities company. A Gaussian Mixture Model (GMM) was used to detect anomalies in the turbine operation. Our end product is a Flask-based web app hosted on AWS, tailored towards wind turbine engineers to facilitate predictive maintenance. The app flags the anomalous data points in the turbine operation and provids the top three variables contributing to the anomaly, allowing the users to further investigate the cause and, if necessary, trigger on-site maintenance evaluations.</p>
+
+								<p>Technologies: Python, AWS, Flask, Docker</p>
+
+								<h2>Skills Demonstrated</h2>
+
+								<ul>
+									<li>Proficiency in managing the end-to-end data science product lifecycle.</li>
+									<li>Effective collaboration, communication, and teamwork.</li>
+									<li>Strong presentation skills and managing stakeholders relationships.</li>
+									<li>Engaging with domain experts to ensure optimal user experience.</li>
+									<li>Development of a robust data pipeline, model creation, and successful application deployment.</li>
+								  </ul><br>
+
+								<h2>App Demo</h2>
+
+								  <img src="images/Capstone_gif.gif" alt="An animated GIF demonstrating a process"><br><br>
+
+								  <h2>Presentation</h2>
+								  <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSU5dG5Am6g_JtsqNBS-evEO8N-O-7AuZIBQ7RJUNV59tPmSOcK1oBVcAkZaHM4P857HVaj3_R_pDXU/embed?start=false&loop=true&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+								
+
+								
+								
+							</article>
+
+
+						
+
+						
+
+					</div>
+
+			
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+			<script>
+				// JavaScript code for hover effect
+				const insightContainers = document.querySelectorAll('.insight');
+				const insightCards = document.querySelectorAll('.insight-card');
+				let hideTimeout; // Variable to store the timeout
+
+				insightContainers.forEach((container, index) => {
+				container.addEventListener('mouseenter', (event) => { // Add the 'event' parameter here
+
+					// Calculate the position of the icon relative to the viewport
+					const viewportHeight = window.innerHeight;
+
+					// Calculate the vertical position of the mouse pointer relative to the viewport
+					const mouseY = event.clientY;
+
+					// Determine the position for the card based on the mouse pointer's location
+					const cardTop = mouseY < (viewportHeight) / 2 ? 120 : -60; // Adjust these values as needed
+
+					// Set the card's position
+					insightCards[index].style.top = `${cardTop}px`;
+
+					// Clear any existing timeout
+					clearTimeout(hideTimeout);
+
+					// Set the insight card to be displayed
+					insightCards[index].style.display = 'block';
+				});
+
+				container.addEventListener('mouseleave', () => {
+					// Delay hiding the card for 0.5 seconds
+					hideTimeout = setTimeout(() => {
+					// Set the insight card to be hidden
+					insightCards[index].style.display = 'none';
+					}, 100); // 500 milliseconds (0.5 seconds)
+				});
+				});
+			
+			</script>
+	</body>
+</html>

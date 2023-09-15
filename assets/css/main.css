@@ -2377,7 +2377,7 @@ input, select, textarea {
 
 	ul {
 		list-style: disc;
-		margin: 0 0 2em 0;
+		margin: 0 0 0em 0;
 		padding-left: 1em;
 	}
 
@@ -3642,6 +3642,7 @@ input, select, textarea {
     align-items: center;
     overflow: hidden;
     margin-right: 20px;
+	min-width: 150px;
 }
 
 .project img {
@@ -3656,20 +3657,34 @@ input, select, textarea {
 /* Style project title */
 .project-details h3 {
     font-size: 20px;
-    margin: 0;
+    margin: 0;		
+	color: #003cff;
+	
 }
+
 
 /* Style project summary */
 .project-details p {
     margin: 0px 0;
 }
 
+  /* Style for  heading */
+  .project-section-heading {
+    font-size: 24px; /* Customize the font size */
+	padding-bottom: 0px;
+    /* Add any other styles you want */
+}
+
+
+
+
+
 
  /* Style for the insight icon */
 .insight-icon {
 	position: absolute;
-	bottom: 15px;
-	left: 160px;
+	bottom: 20px;
+	right: 10px;
 	font-size: 24px;
 	cursor: pointer;
 	color: #007bff ; /* Customize the icon color */
@@ -3686,10 +3701,10 @@ input, select, textarea {
 /* Style for the insight card (initially hidden) */
 .insight-card {
     display: none;
-    position: absolute;
-    top: 30px;
-    left: 250px;
-    width: 1000px;
+    position: fixed;
+    top: 120px;
+    right: 175px;
+    width: 1150px;
     padding: 15px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -3707,23 +3722,25 @@ input, select, textarea {
 .insight-table .insight-text {
     display: table-cell;
     vertical-align: top; /* Adjust vertical alignment as needed */
-    padding: 10px;
+    padding: 5px;
 }
 
 /* Style for the image column */
 .insight-table .insight-image {
-    width: 25%; /* Adjust the width of the image column */
+    width: 50%; /* Adjust the width of the image column */
+	height: auto;
 }
 
 /* Style for the text column */
 .insight-table .insight-text {
-    width: 75%; /* Adjust the width of the text column */
+    width: 50%; /* Adjust the width of the text column */
 }
 
 /* Style for the image in the card */
 .insight-table .insight-image img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
+	object-fit: cover;
 }
 
 /* Style for the title in the card */
@@ -3743,5 +3760,3 @@ input, select, textarea {
 	white-space: nowrap;
 	transform: translate(-0%, 20px); /* Adjust the Y-offset (10px) as needed */
   }
-  
-  
