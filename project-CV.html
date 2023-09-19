@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Deva Kulkarni</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png">
+
+		
+
+	</head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-84DBHSRQ65"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-84DBHSRQ65');
+	</script>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Deva Kulkarni</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="projects.html">Projects</a></li>
+								<li><a href="https://drkulkarni236.github.io/Resume/Deva_Kulkarni.pdf" target="_blank">Resume</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</nav>
+						<!-- <nav class="main">
+							<ul>
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav> -->
+				</header>
+
+				
+				<!-- Main -->
+					<div id="main">
+
+						
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2>Image classification: Pistachios</h2>										
+									</div>									
+								</header>										
+								
+								<p>This is a group project I worked on for the Master of Information and Data Science (MIDS) - <a href='https://www.ischool.berkeley.edu/courses/datasci/281' target="_blank"> Computer Vision</a> course at UC Berkeley.
+									
+								Teammates: <a href='https://www.linkedin.com/in/blake-bormes/' target="_blank"> Blake Bormes</a>, <a href='https://www.linkedin.com/in/albert-yu-j-24a91815b/' target="_blank"> Albert (Yu) Jiang</a>. <br> 
+								
+								Links:  <a href="https://drkulkarni236.github.io/Folder/Hate Speech Detection in Hinglish and Korean Media.pdf" target="_blank">NEED TO ADD NOTEBOOK</a> </p>
+
+
+								<h2>Skills Demonstrated</h2>
+
+								<ul>
+									<li>Proficiency in handling image data, computer vision techniques, and numpy array manipulation for precise feature extraction.</li>
+									<li>Conducting comprehensive exploratory data analysis (EDA) to extract valuable insights.</li>
+									<li>Understanding of dimensionality reduction techniques.</li>
+									<li>Expertise in fine-tuning machine learning models and conducting meticulous error analysis.</li>
+									<li>Collaborative work on report notebooks, generating well-commented and comprehensible code.</li>
+									
+								  </ul><br>	
+
+								  <p>Technologies: NumPy, Sklearn, OpenCV, Tensorflow</p>								
+
+								
+								<h2>Overwiew</h2>
+								<p>This project centered on the classification of pistachio images using a range of computer vision techniques using OpenCV. Our primary focus was on effectively managing image data by manipulating numpy arrays, encompassing tasks such as exploratory data analysis, feature extraction, and machine learning model development. Additionally, we harnessed dimensionality reduction methods to extract critical features and gain deeper insights from the dataset. Our analysis encompassed model outputs and detailed error examination, resulting in a robust classification model with a 99.1% accuracy rate. We utilized logistic regression, support vector machine (SVM), and convolutional neural network (CNN) models in this project.</p>
+								
+
+								<h2>Key Features</h2>
+
+								<ul>
+									<li><strong>Feature extraction 1:</strong> A key feature extraction step included fitting an ellipse to the pistachio's edge, allowing us to capture essential attributes related to its size and shape. Additionally, we employed a K-means clustering model to analyze image colors, effectively identifying and distinguishing the pistachio's shell, nut, and edges. </li>
+
+									<img src="images/CV_Feature_1.png" alt=" " width="500" height="350"><br><br>
+
+
+									<li><strong>Feature extraction 2:</strong> To quantify the fit of the ellipse to the outer edges of the pisatchio, we calculate the distance of each point on the pistachio edge from the fitted ellipse. The final feature is the sum of all the distances for each pistachio scaled by the perimeter of the ellipse. </li>
+
+									<img src="images/CV_Feature_2.png" alt=" " width="500" height="350"><br><br>
+
+									<li><strong>t-SNE Subclusters:</strong> The t-SNE visualization revealed a distinct separation into two subclusters within pistachio type 1. Upon closer examination, we identified that this separation resulted from certain pistachios having their nut obscured from the camera's view. Consequently, we segregated pistachios based on nut visibility.</li>
+
+									<img src="images/CV_TSNE.png" alt=" " width="1000" height="350"><br><br>
+
+
+									<li><strong>Model Output Analysis:</strong> We conducted an in-depth analysis of the model's predictions, focusing on both highly confident and uncertain classifications. This investigation revealed that pistachio size and the shell color's saturation significantly influenced the model's confidence in correct classifications.</li>
+
+									<img src="images/CV_Output.png" alt=" " width="1200" height="350"><br><br>
+									
+								</ul> <br>
+
+
+
+
+											
+
+								 								
+
+								
+
+							
+								
+
+								
+								
+							</article>
+
+
+						
+
+						
+
+					</div>
+
+			
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+			<script>
+				// JavaScript code for hover effect
+				const insightContainers = document.querySelectorAll('.insight');
+				const insightCards = document.querySelectorAll('.insight-card');
+				let hideTimeout; // Variable to store the timeout
+
+				insightContainers.forEach((container, index) => {
+				container.addEventListener('mouseenter', (event) => { // Add the 'event' parameter here
+
+					// Calculate the position of the icon relative to the viewport
+					const viewportHeight = window.innerHeight;
+
+					// Calculate the vertical position of the mouse pointer relative to the viewport
+					const mouseY = event.clientY;
+
+					// Determine the position for the card based on the mouse pointer's location
+					const cardTop = mouseY < (viewportHeight) / 2 ? 120 : -60; // Adjust these values as needed
+
+					// Set the card's position
+					insightCards[index].style.top = `${cardTop}px`;
+
+					// Clear any existing timeout
+					clearTimeout(hideTimeout);
+
+					// Set the insight card to be displayed
+					insightCards[index].style.display = 'block';
+				});
+
+				container.addEventListener('mouseleave', () => {
+					// Delay hiding the card for 0.5 seconds
+					hideTimeout = setTimeout(() => {
+					// Set the insight card to be hidden
+					insightCards[index].style.display = 'none';
+					}, 100); // 500 milliseconds (0.5 seconds)
+				});
+				});
+			
+			</script>
+	</body>
+</html>
