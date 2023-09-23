@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Deva Kulkarni</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png">
+
+		
+
+	</head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-4724G977P7"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-4724G977P7');
+	</script>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Deva Kulkarni</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="projects.html">Projects</a></li>
+								<li><a href="https://drkulkarni236.github.io/Resume/Deva_Kulkarni.pdf" target="_blank">Resume</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</nav>
+						<!-- <nav class="main">
+							<ul>
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav> -->
+				</header>
+
+				
+				<!-- Main -->
+					<div id="main">
+
+						
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2>REGRESSION ANALYSIS: MASK-USE AND COVID-19 CASES</h2>										
+									</div>									
+								</header>										
+								
+								<p>This is a group project I worked on for the Master of Information and Data Science (MIDS) - <a href='https://www.ischool.berkeley.edu/courses/datasci/203' target="_blank"> Statistics for Data Science</a> course at UC Berkeley.
+									
+								Teammates: <a href='https://www.linkedin.com/in/tiantian-zhao-kl/' target="_blank"> Tiantian Zhao</a>, <a href='https://www.linkedin.com/in/yuqiao-chen/' target="_blank"> Yuqiao Chen</a>. <br> 
+								
+								Links:  <a href="https://docs.google.com/presentation/d/1-IRwi_yjs5xftAJzWrvBwPGV1p7_9ANi/edit#slide=id.p1" target="_blank">[Slide Deck]</a>, <a href="https://drkulkarni236.github.io/Folder/Lab2_Final_Report.pdf" target="_blank">[Final Report]</a> </p>
+
+
+								<h2>Skills Demonstrated</h2>
+
+								<ul>
+									<li>Formulating precise research questions and designing studies to address them.</li>
+									<li>Collecting data from diverse sources to support study objectives.</li>																	
+									<li>Theorizing causal pathways, including covariate considerations.</li>
+									<li>Proficiency in statistical analysis and regression modeling using R.</li>
+									<li>Critically assessing validity of model assumptions and identifying model limitations.</li>																
+								  </ul><br>	
+
+								  <p>Technologies: R</p>								
+
+								
+								<h2>Overwiew</h2>
+								<p>In this project, we conducted an investigation into the relationship between COVID-19 cases and mask usage behavior across various counties in the United States. Our primary objective was to utilize regression models to explore this relationship. We constructed a theoretical causal pathway and carefully selected relevant covariates. Data collection involved aggregating information from diverse sources to ensure the availability of necessary variables. We constructed and evaluated multiple regression models, with a focus on interpretation of the generated coefficients. A critical aspect of our analysis involved assessing the validity of model assumptions and identifying potential limitations in our models.</p>
+								
+
+								<h2>Approach</h2>
+
+								<ul>
+									<li><strong>Formulating the Research Question:</strong> In light of the far-reaching impact of the COVID-19 pandemic, there is a pressing need for comprehensive insights to enhance future preparedness. Notably, the utilization of masks played a pivotal role in curbing virus transmission, but its effectiveness was significantly shaped by political dynamics in the United States. To gain a deeper understanding of this relationship, we investigate the following research question: <br>
+									<strong>“How does public mask usage influence the incidence of Covid-19 cases within their respective communities?”</strong></li><br>
+
+									<li><strong>Causal map and Covariates:</strong>  Our analysis is guided by a causal model. We theorized that mask use affects Covid-19 transmission directly, while urban counties may experience increased transmission due to higher population densities. Urban counties may also have differences in mask use behavior due to political leanings. Education could drive mask usage because of better virus transmission understanding. The percentage of seniors might impact case counts due to increased sysmptomatic cases and testing, and the percentage of females might influence cases through systematic lifestyle differences. </li> <br>
+
+									<img src="images/Stats_Causal.png" alt=" " width="400" height="350"><br><br>
+
+									<li><strong>Data sources and EDA:</strong> We gathered necessary covariate data from diverse sources, including the New York Times Survey, National Institute of Health, Department of Agriculture, Kaiser Health News, and American Community Survey, which we aggregated for our regression analysis. Below, you can see a county-wise distribution of Covid-19 cases.  </li> <br>
+
+									<img src="images/Stats_Covid.png" alt=" " width="600" height="325"><br><br>
+
+									<li><strong>Regression Output Analysis:</strong> We employed R to construct progressively complex regression models to assess the impact of various covariates on the outcome variable. The analysis revealed intriguing findings, including a positive coefficient for mask use, indicating that counties with higher mask usage had more Covid-19 cases. Urban counties exhibited a 20% higher Covid-19 rate compared to rural areas. Moreover, there was a negative coefficient for education level. Finally, we saw a notably large intercept term, suggesting that the variables considered may not be dominant causal factors. </li> <br>
+
+									<img src="images/Stats_Regress.png" alt=" " width="600" height="400"><br><br>
+
+									<li><strong>Limitations:</strong> The study acknowledged several limitations, including potential reverse causality between mask usage and COVID cases; non-standardized data collection processes during the early pandemic, resulting in potential inaccuracies and missing cases; political influences on county responses and mask usage; and the limited analysis scope, which focused solely on one date for COVID case counts.Furthermore, we conducted a critical analysis on the validity of the assumptions of the models, assessing independence of the data point, collinearity between variables, and heteroskedasticity of model residuals.</li> <br>								
+									
+								</ul> <br>
+
+
+								<h2>Presentation</h2>
+								<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQg5RBJAHDviimXJFE3jKcXZD7baZcH3k4HSzEaokzlRf-K2tqrMhp3y0FDQsgAjQ/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+
+
+											
+
+								 								
+
+								
+
+							
+								
+
+								
+								
+							</article>
+
+
+						
+
+						
+
+					</div>
+
+			
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+			<script>
+				// JavaScript code for hover effect
+				const insightContainers = document.querySelectorAll('.insight');
+				const insightCards = document.querySelectorAll('.insight-card');
+				let hideTimeout; // Variable to store the timeout
+
+				insightContainers.forEach((container, index) => {
+				container.addEventListener('mouseenter', (event) => { // Add the 'event' parameter here
+
+					// Calculate the position of the icon relative to the viewport
+					const viewportHeight = window.innerHeight;
+
+					// Calculate the vertical position of the mouse pointer relative to the viewport
+					const mouseY = event.clientY;
+
+					// Determine the position for the card based on the mouse pointer's location
+					const cardTop = mouseY < (viewportHeight) / 2 ? 120 : -60; // Adjust these values as needed
+
+					// Set the card's position
+					insightCards[index].style.top = `${cardTop}px`;
+
+					// Clear any existing timeout
+					clearTimeout(hideTimeout);
+
+					// Set the insight card to be displayed
+					insightCards[index].style.display = 'block';
+				});
+
+				container.addEventListener('mouseleave', () => {
+					// Delay hiding the card for 0.5 seconds
+					hideTimeout = setTimeout(() => {
+					// Set the insight card to be hidden
+					insightCards[index].style.display = 'none';
+					}, 100); // 500 milliseconds (0.5 seconds)
+				});
+				});
+			
+			</script>
+	</body>
+</html>

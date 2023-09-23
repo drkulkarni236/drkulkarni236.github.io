@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Deva Kulkarni</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png">
+
+		
+
+	</head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-4724G977P7"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-4724G977P7');
+	</script>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Deva Kulkarni</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="projects.html">Projects</a></li>
+								<li><a href="https://drkulkarni236.github.io/Resume/Deva_Kulkarni.pdf" target="_blank">Resume</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</nav>
+						<!-- <nav class="main">
+							<ul>
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav> -->
+				</header>
+
+				
+				<!-- Main -->
+					<div id="main">
+
+						
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2>REAL-TIME DATA STREAMING PIPELINE FOR TWEETS</h2>										
+									</div>									
+								</header>										
+								
+								<p>This is a group project I worked on for the Master of Information and Data Science (MIDS) - <a href='https://www.ischool.berkeley.edu/courses/datasci/205' target="_blank"> Fundamentals of Data Engineering</a> course at UC Berkeley.
+									
+								Teammates: <a href='https://www.ischool.berkeley.edu/people/mili-gera' target="_blank"> Mili Gera</a>, <a href='https://www.linkedin.com/in/matthewwhittaker2/' target="_blank"> Matt Whittaker</a>, <a href='https://www.linkedin.com/in/heesukjang/' target="_blank"> Heesuk Jang</a>. <br> 
+								
+								Links:  <a href="https://docs.google.com/presentation/d/1KUQ5MgEP9XlQ4T7hHF8E2EuonLKJQbnD/edit#slide=id.p2" target="_blank">[Slide Deck]</a>, <a href="https://drkulkarni236.github.io/Folder/Lab2_Final_Report.pdf" target="_blank">[NEED TO ADD NOTEBOOK]</a> </p>
+
+
+								<h2>Skills Demonstrated</h2>
+
+								<ul>
+									<li>Constructing data pipelines for real-time data streaming. </li>
+									<li>Utilizing Docker to containerize and deploy software components.</li>																	
+									<li>Integrating external application programming interfaces (APIs) into data workflows.</li>
+									<li>Comprehensive documentation of the project and managing GitHub repositories.</li>
+									<li>Creating informative vizualizations to derive meaningful business insights.</li>																
+								  </ul><br>	
+
+								  <p>Technologies: GCP, Docker, Kafka, Spark, Hadoop, Presto</p>								
+
+								
+								<h2>Overwiew</h2>
+								<p>In this project, our team built a data pipeline on Google Cloud Platform (GCP) to stream real-time tweet data for the purpose of data analysis, visualization creation, and addressing relevant inquiries. We connected to the Twitter API to receive climate change related tweets via Kafka, employed Spark to ingest and transform the Kafka messages, subsequently storing them in the Hadoop Distributed File System (HDFS). Utilizing Presto as our SQL platform, we conducted data queries to address key questions pertaining to climate change. Docker was used for efficient service containerization. </p>								
+
+								<h2>Approach</h2>
+
+								<ul>
+									<li><strong>Motivation:</strong> This project aims to collect and analyze real-time climate change-related tweet data from Twitter, recognizing its global significance. Understanding public sentiments and opinions on climate change is crucial, given its status as one of the most pressing global challenges. By building a data pipeline for efficient data collection and analysis, we seek to provide valuable insights for political entities, environmental organizations, and corporations interested in this critical issue.</li><br>
+
+									<li><strong>Data:</strong> Data for this project is sourced from the Twitter API, accessible upon approval of a developer account. Users receive an authentication token for access and connect to the API via a designated URL. Two key parameters, "rules" and "fields," govern this API connection. "Rules" serve to filter tweets based on specified criteria like phrases or hashtags, while "fields" determine the attributes of retrieved tweet objects, including ID, text, author name, and engagement metrics (likes, retweets, comments). Tweets are received in a nested JSON format.</li><br>
+
+
+									<img src="images/Tweets_Data.png" alt=" " width="500" height="300"><br><br>
+
+									<li><strong>Pipeline:</strong> 	
+										<ul>
+											<li><strong>Containerization and Deployment:</strong> A Docker Compose file orchestrates containerization for each of the components of the pipeline. This entire data pipeline was deployed on Google Cloud Platform (GCP).</li>
+
+											<li><strong>Streaming data:</strong> Data from the Twitter API is accessed via the a python script, requiring a developer account and Bearer Token.  The script specifies rules and fields for the Twitter stream, allowing customization based on phrases, hashtags, or specific accounts. It logs received messages to Kafka using a Kafka Producer.</li>
+
+											<li><strong>Data Transformation:</strong> A python script is used to run a Spark job. It ingests messages from the Kafka topic in a streaming fashion, transforms them into a Spark DataFrame using a predefined schema, and writes both raw and transformed data tables to HDFS as Parquet files. The script also extracts hashtags and URLs from tweet text, adding them as additional columns to the Hadoop table.</li>
+
+											<li><strong>Querying: </strong> To query the data, we create an external table using Hive in a Jupyter notebook. This notebook establishes a connection between Presto and the HDFS-stored data. We use Pandas to convert tables into DataFrames, facilitating the creation of visualizations to address project-specific questions.</li>
+										</ul>							
+										</li><br>
+
+
+									
+
+									
+															
+									
+								</ul> <br>
+
+
+								<h2>Presentation</h2>
+								<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSas5PUvF3Ymq0vRgqWzdkusoF6eTSehL8KBREc7jF8wdtzh5AqxeMDNXUSMTlhKA/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+
+
+											
+
+								 								
+
+								
+
+							
+								
+
+								
+								
+							</article>
+
+
+						
+
+						
+
+					</div>
+
+			
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+			<script>
+				// JavaScript code for hover effect
+				const insightContainers = document.querySelectorAll('.insight');
+				const insightCards = document.querySelectorAll('.insight-card');
+				let hideTimeout; // Variable to store the timeout
+
+				insightContainers.forEach((container, index) => {
+				container.addEventListener('mouseenter', (event) => { // Add the 'event' parameter here
+
+					// Calculate the position of the icon relative to the viewport
+					const viewportHeight = window.innerHeight;
+
+					// Calculate the vertical position of the mouse pointer relative to the viewport
+					const mouseY = event.clientY;
+
+					// Determine the position for the card based on the mouse pointer's location
+					const cardTop = mouseY < (viewportHeight) / 2 ? 120 : -60; // Adjust these values as needed
+
+					// Set the card's position
+					insightCards[index].style.top = `${cardTop}px`;
+
+					// Clear any existing timeout
+					clearTimeout(hideTimeout);
+
+					// Set the insight card to be displayed
+					insightCards[index].style.display = 'block';
+				});
+
+				container.addEventListener('mouseleave', () => {
+					// Delay hiding the card for 0.5 seconds
+					hideTimeout = setTimeout(() => {
+					// Set the insight card to be hidden
+					insightCards[index].style.display = 'none';
+					}, 100); // 500 milliseconds (0.5 seconds)
+				});
+				});
+			
+			</script>
+	</body>
+</html>
