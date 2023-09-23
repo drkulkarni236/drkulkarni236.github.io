@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Deva Kulkarni</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png">
+
+		
+
+	</head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-4724G977P7"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-4724G977P7');
+	</script>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Deva Kulkarni</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="projects.html">Projects</a></li>
+								<li><a href="https://drkulkarni236.github.io/Resume/Deva_Kulkarni.pdf" target="_blank">Resume</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</nav>
+						<!-- <nav class="main">
+							<ul>
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav> -->
+				</header>
+
+				
+				<!-- Main -->
+					<div id="main">
+
+						
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2>SQL QUERYING: ANALYSIS OF BIKE SHARE DATA</h2>										
+									</div>									
+								</header>										
+								
+								<p>This is a project I worked on for the Master of Information and Data Science (MIDS) - <a href='https://www.ischool.berkeley.edu/courses/datasci/200' target="_blank"> Programming for Data Science</a> course at UC Berkeley.
+									
+																
+								<br>
+								Links:  <a href="https://drkulkarni236.github.io/Folder/Lab2_Final_Report.pdf" target="_blank">[NEED TO ADD CODE]</a> </p>
+
+
+								<h2>Skills Demonstrated</h2>
+
+								<ul>
+									<li>Conceptualizing an app and its features tailored to a specific use case.</li>
+									<li>Designing an object-oriented structure with class interconnections.</li>																	
+									<li>Writing clean, well-commented codeto ensure readability and maintainability.</li>
+								  </ul><br>	
+
+								  <p>Technologies: Python</p>	
+								  
+								  
+								  <h2>Overwiew</h2>
+								  <p>In this project, I developed a calorie counter application, emphasizing the utilization of object-oriented programming principles. This application effectively gathers user input regarding health and dietary habits, subsequently offering personalized recommendations for achieving their goals. The application comprises seven interconnected classes and incorporates robust error-handling mechanisms for enhanced reliability and functionality.</p>							
+								  
+								  
+								  <img src="images/Cal_Structure.png" alt=" " width="800" height="400"><br><br>
+
+								  <img src="images/Cal_Flow.png" alt=" " width="800" height="400"><br><br>
+
+							
+								
+
+								
+								
+							</article>
+
+
+						
+
+						
+
+					</div>
+
+			
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+			<script>
+				// JavaScript code for hover effect
+				const insightContainers = document.querySelectorAll('.insight');
+				const insightCards = document.querySelectorAll('.insight-card');
+				let hideTimeout; // Variable to store the timeout
+
+				insightContainers.forEach((container, index) => {
+				container.addEventListener('mouseenter', (event) => { // Add the 'event' parameter here
+
+					// Calculate the position of the icon relative to the viewport
+					const viewportHeight = window.innerHeight;
+
+					// Calculate the vertical position of the mouse pointer relative to the viewport
+					const mouseY = event.clientY;
+
+					// Determine the position for the card based on the mouse pointer's location
+					const cardTop = mouseY < (viewportHeight) / 2 ? 120 : -60; // Adjust these values as needed
+
+					// Set the card's position
+					insightCards[index].style.top = `${cardTop}px`;
+
+					// Clear any existing timeout
+					clearTimeout(hideTimeout);
+
+					// Set the insight card to be displayed
+					insightCards[index].style.display = 'block';
+				});
+
+				container.addEventListener('mouseleave', () => {
+					// Delay hiding the card for 0.5 seconds
+					hideTimeout = setTimeout(() => {
+					// Set the insight card to be hidden
+					insightCards[index].style.display = 'none';
+					}, 100); // 500 milliseconds (0.5 seconds)
+				});
+				});
+			
+			</script>
+	</body>
+</html>
